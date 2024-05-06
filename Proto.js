@@ -25,7 +25,7 @@ spans.forEach((span, idx) => {
 // console.log(response);
 // const data = await response.json();
 // console.log(data);\
-const cityname = "Brooklyn";
+const cityname = "brooklyn";
 const zipcode = 11221;
 const countrycode = "US";
 const button = document.querySelectorAll(".submit-button");
@@ -63,19 +63,64 @@ fetch(apiUrl)
         break;
       case "shower rain":
       case "rain":
+      case "light intensity drizzle":
+      case "drizzle":
+      case "heavy intensity drizzle":
+      case "drizzle rain":
+      case "heavy intensity drizzle rain":
+      case "heavy shower rain and drizzle":
+      case "shower drizzle":
+      case "light rain":
+      case "moderate rain":
+      case "heavy intensity rain":
+      case "very heavy rain":
+      case "extreme rain":
+      case "light intensity shower rain":
+      case "shower rain":
+      case "heavy intensity shower rain":
+      case "ragged shower rain":
         imageSource = "./src/rain-2.png";
         break;
       case "thunderstorm":
+      case "light thunderstorm":
+      case "heavy thunderstorm":
+      case "ragged thunderstorm":
+        imageSource = "./src/storm.png";
+        break;
+      case "freezing rain":
+        imageSource = "./src/snowcloud.png";
+        break;
+      case "thunderstorm with light rain":
+      case "thunderstorm with rain":
+      case "thunderstorm with heavy rain":
+      case "thunderstorm with light drizzle":
+      case "thunderstorm with heavy drizzle":
         imageSource = "./src/storm-2.png";
         break;
       case "snow":
-        imageSource = "./src/cloud.png";
+      case "light snow":
+      case "heavy snow":
+      case "sleet":
+      case "light shower sleet":
+      case "light rain and snow":
+      case "shower sleet":
+      case "light rain and snow":
+      case "rain and snow":
+      case "light shower snow":
+      case "shower snow":
+      case "heavy":
+        imageSource = "./src/snowy.png";
         break;
+      //atmosphere weather below
       case "mist":
         imageSource = "./src/mist.png";
         break;
-      default:
-        imageSource = "";
+      case "haze":
+        imageSource = "./src/fog.png";
+        break;
+      case "tornado":
+        imageSource = "./src/hurricane.png";
+        break;
     }
 
     const htmlContent = `
