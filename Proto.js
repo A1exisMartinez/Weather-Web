@@ -67,7 +67,8 @@ const displayweatherData = function (data) {
       imageSource = "./src/1cloud.png";
       break;
     case "few clouds":
-      imageSource = "./src/cloud.png";
+    case "broken clouds":
+      imageSource = "./src/cloudy.png";
       break;
     case "clear sky":
       imageSource = "./src/sun.png";

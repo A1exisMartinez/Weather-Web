@@ -212,7 +212,7 @@
 /* Other styles */
 body {
   background-color: skyblue;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   font-family: "Roboto", sans-serif;
   justify-content: center;
@@ -237,11 +237,29 @@ body {
 p {
   font-size: 25px;
   font-family: "Sedgwick Ave Display", cursive;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   font-style: italic;
+  -webkit-text-stroke: 1px #302e2ea0;
 }
 
 .input-area {
-  padding-top: 5rem;
+  padding-top: 3rem;
+  /* background-color: #eaeef2; */
+  background-color: #e6f8fc;
+  border-radius: 40px;
+  min-height: 640px;
+  max-height: 700px;
+  min-width: 600px;
+  max-width: 650px;
+  text-align: center;
+  outline: 3px solid rgba(0, 0, 0, 0.684);
+}
+
+#city-button {
+  border-radius: 12px;
+}
+
+#city-input {
+  border-radius: 30px;
 }
