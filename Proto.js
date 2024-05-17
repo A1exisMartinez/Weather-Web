@@ -42,12 +42,53 @@ button.addEventListener("click", async function () {
 // prarmeter like the zip-code and city in the future!
 const fetchweatherData = async function (city) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=imperial`;
-  const response = await fetch(apiUrl);
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      if (response.status === 404) {
+        const img404 = document.createElement("img");
+        img404.src = "./src/404-error.png"; // Set the source of the image
+        img404.alt = "Error 404";
+        output.innerHTML = "Please Submit In a Correct City Name!";
+        output.appendChild(img404);
+        console.log(response);
+      } else if (response.status === 400) {
+        const img400 = document.createElement("img");
+        img400.src = "./src/browser.png"; // Set the source of the image
+        img400.alt =
+          "You can get 400 error if either some mandatory parameters in the request are missing or some of request parameters have incorrect format or values out of allowed range.";
+        output.innerHTML = "Please Make Sure You Are Entering All Inputs";
+        output.appenedChild(img400);
+      } else if (response.status === 401) {
+        const img401 = docuemnt.createElement("img");
+        img401.src = "./src/browser.png"; // Set the source of the image
+        img401.alt =
+          "You can get 401 error if API token did not providen in the request or in case API token provided in the request does not grant access to this API.";
+        output.innerHTML =
+          "Please Make Sure You Entered The Correct API token provided!";
+        output.appenedChild(img401);
+      } else if (response.status === 429) {
+        const img429 = docuemnt.createElement("img");
+        img429.src = "./src/browser.png"; // Set the source of the image
+        img429.alt = "Too Many Requests Being Made Currently.";
+        output.innerHTML =
+          "Please Make Sure You Entered The Correct API token provided!";
+        output.appenedChild(img429);
+      } else {
+        const imageError = docuemnt.createElement("img");
+        imageError.src = "./src/browser.png"; // Set the source of the image
+        imageError.alt = "Something Went Wrong On Our Part.";
+        output.innerHTML = "Error";
+        output.appenedChild(imageError);
+      }
+    }
+
+    const responsedata = await response.json();
+    return responsedata;
+  } catch (error) {
+    console.log("You have an error");
+    console.log(error);
   }
-  const responsedata = await response.json();
-  return responsedata;
 };
 //
 // purpose: take weather data (that's already been fetched)
