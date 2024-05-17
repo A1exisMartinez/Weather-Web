@@ -31,9 +31,9 @@ const countrycode = "US";
 const apikey = "b27226d32b98fe892632afdcc471e314";
 const outputElement = document.getElementById("city-input");
 const output = document.getElementById("out-put");
-
 const button = document.querySelector("#city-button");
-button.addEventListener("click", async function () {
+// button
+outputElement.addEventListener("keyup", async function () {
   const city = outputElement.value;
   const responsedata = await fetchweatherData(city);
   displayweatherData(responsedata);
