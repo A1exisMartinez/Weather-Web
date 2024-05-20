@@ -99,6 +99,7 @@
   font-weight: 400;
   font-style: normal;
   perspective: 1000px;
+  padding-right: 30px;
 }
 
 .word span {
@@ -222,6 +223,19 @@ body {
   margin: 0;
 }
 
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Additional styles for the div */
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 26px;
+  z-index: 9999; /* Ensure the div appears on top of other elements */
+}
+
 .fixed {
   position: fixed;
   top: 40px;
@@ -244,7 +258,7 @@ p {
 }
 
 .input-area {
-  padding-top: 2rem;
+  padding-top: 1rem;
   /* background-color: #eaeef2; */
   background-color: #e6f8fc;
   border-radius: 40px;
