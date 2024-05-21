@@ -236,6 +236,16 @@ body {
   z-index: 9999; /* Ensure the div appears on top of other elements */
 }
 
+a {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #3331;
+}
+
+
+
+
 .fixed {
   position: fixed;
   top: 40px;
