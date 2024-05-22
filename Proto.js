@@ -33,11 +33,14 @@ const outputElement = document.getElementById("city-input");
 const output = document.getElementById("out-put");
 const button = document.querySelector("#city-button");
 // button
-outputElement.addEventListener("keyup", async function () {
+outputElement.addEventListener("keyup", async function (event) {
+  if (event.key === "Enter") {
+    console.log(event.key);
   const city = outputElement.value;
   const responsedata = await fetchweatherData(city);
   displayweatherData(responsedata);
-});
+}});
+  
 // don't touch this!!! unless you want to pass in another
 // prarmeter like the zip-code and city in the future!
 const fetchweatherData = async function (city) {
