@@ -230,19 +230,20 @@ body {
   transform: translateX(-50%);
   /* Additional styles for the div */
   justify-content: space-between;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 26px;
   z-index: 9999; /* Ensure the div appears on top of other elements */
-}
-
-a {
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #3331;
+  color: rgba(0, 0, 0, 0.067);
 }
 
+a {
+  color: #333;
+  padding: 10px;
+}
 
 
 
@@ -259,7 +260,7 @@ a {
 }
 
 p {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 800;
   font-style: normal;
@@ -268,14 +269,12 @@ p {
 }
 
 .input-area {
-  padding-top: 1rem;
+  padding-top: 3rem;
   /* background-color: #eaeef2; */
   background-color: #e6f8fc;
   border-radius: 40px;
-  min-height: 690px;
-  max-height: 740px;
-  min-width: 600px;
-  max-width: 660px;
+  height: 630px;
+  width: 600px;
   text-align: center;
   outline: 3px solid rgba(0, 0, 0, 0.684);
 }
@@ -289,19 +288,19 @@ p {
 }
 
 .app-img {
-  height: 420px;
-  width: 420px;
+  height: 390px;
+  width: 390px;
 }
 
 img {
   padding-top: 3rem;
   padding-bottom: 4rem;
-  height: 425px;
+  height: 420px;
   width: 400px;
 }
 
 #out-put {
-  padding-top: 3rem;
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
